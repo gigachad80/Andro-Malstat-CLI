@@ -1,6 +1,6 @@
 # Andro-Malstat
 
-**Full-Featured Static Analysis ORchestration Automation Framework for APK Files**
+**Full-Featured Static Analysis Orchestration Automation Framework for APK Files**
 
 ![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-purple.svg)
 ![Contributions](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)
