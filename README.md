@@ -11,12 +11,14 @@ Andro-Malstat is a comprehensive hybrid static analysis engine for Android APK f
 ## Table of Contents
 
 - [Overview](#overview)
+- [Comparison with MobSF](#comparison-with-mobsf)
 - [Features](#features)
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](#usage)
 - [YARA Rules](#yara-rules)
 - [Analysis Phases](#analysis-phases)
+- [TODO](#todo)
 - [License](#license)
 - [Contact](#contact)
 
@@ -32,6 +34,42 @@ Andro-Malstat performs multi-phase static analysis on Android applications to id
 - Native library inspection
 - YARA malware signature scanning
 - Anti-analysis technique detection
+
+## Comparison with MobSF
+
+| Feature | Andro-Malstat | MobSF |
+|---------|---------------|-------|
+| **Type** | Lightweight CLI orchestration automation framework | Full-featured web platform |
+| **Installation** | `pip install` (3 dependencies) | Docker/complex setup required |
+| **Runtime** | Fast (~30-60 seconds) | Slower (2-5 minutes) |
+| **Memory Usage** | Low (~200-500 MB) | High (~1-2 GB) |
+| **YARA Support** | Custom rules via `yara_rules/` directory | Built-in ruleset |
+| **User Interface** | Terminal with color output | Web dashboard |
+| **Report Format** | JSON + terminal | PDF, JSON, HTML |
+| **Obfuscation Detection** | ProGuard/R8 entropy analysis | Code complexity metrics |
+| **Anti-Analysis Detection** | Debugger/Emulator/Root/Frida | Limited |
+| **Native Code Analysis** | Shell payload detection | Comprehensive binary analysis |
+| **Dynamic Analysis** | No | Yes (with emulator) |
+| **API Scanning** | Hybrid (bytecode + strings) | Bytecode only |
+| **Nested APK Detection** | Yes | Yes |
+| **Learning Curve** | Minimal (CLI arguments) | Moderate (web interface) |
+| **Use Case** | Quick triage, CI/CD integration, malware hunting | In-depth security audit, compliance |
+| **Deployment** | Local script | Self-hosted server |
+| **Best For** | Rapid analysis, automation, researchers | Comprehensive reports, teams, enterprises |
+
+**When to use Andro-Malstat:**
+- Quick malware triage and threat hunting
+- CI/CD pipeline integration
+- Resource-constrained environments
+- Command-line automation workflows
+- Custom YARA rule development
+
+**When to use MobSF:**
+- Comprehensive security audits
+- Team collaboration with web UI
+- Detailed compliance reports (PDF)
+- Dynamic analysis requirements
+- Enterprise security assessments
 
 ## Features
 
@@ -237,6 +275,12 @@ rule Your_Custom_Rule {
 | 60-99 | HIGH | Significant security concerns |
 | 30-59 | MEDIUM | Moderate risk, review recommended |
 | 0-29 | LOW | Minor issues or clean |
+
+## TODO
+
+### Planned Features
+
+- [ ] **Web UI Version** (Coming Soon)
 
 ## License
 
