@@ -293,3 +293,9 @@ Email: pookielinuxuser@tutamail.com
 ---
 
 **Made with Python** - Advanced static analysis for Android security research.
+
+--- 
+
+First Released : 30st January 2026
+
+Last updated : 30st January 2026
